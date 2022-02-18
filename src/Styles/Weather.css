@@ -1,0 +1,248 @@
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.input {
+  height: 3rem;
+  border-radius: 100px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #bbb;
+  border: none;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+
+.input::-webkit-input-placeholder {
+  color: #bbb;
+}
+
+.input:-ms-input-placeholder {
+  color: #bbb;
+}
+
+.input::-ms-input-placeholder {
+  color: #bbb;
+}
+
+.input::placeholder {
+  color: #bbb;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.btn {
+  display: none;
+}
+
+.card {
+  -webkit-perspective: 150rem;
+          perspective: 150rem;
+  position: relative;
+  height: 45rem;
+  width: 30rem;
+  font-family: "Ubuntu", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card__side {
+  height: 45rem;
+  width: 30rem;
+  border-radius: 25px;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.25);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.card__side--front {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card__side--front .city-state {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 500;
+  padding-top: 2rem;
+}
+
+.card__side--front .date {
+  color: #fff;
+  font-size: 22px;
+}
+
+.card__side--front .temp {
+  color: #fff;
+  font-size: 115px;
+  font-weight: 900;
+  margin-top: 3.5rem;
+  text-shadow: 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.card__side--front .temp span {
+  font-weight: 500;
+}
+
+.card__side--front .icon {
+  padding-top: 2rem;
+}
+
+.card__side--front .condition {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 15px;
+  text-shadow: 0px 3px rgba(0, 0, 0, 0.4);
+}
+
+.card__side--front .hi-low {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500px;
+  text-shadow: 0px 4px rgba(0, 0, 0, 0.4);
+}
+
+.card__side--front .details {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.25);
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.6);
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-radius: 12px;
+  line-height: 0.5rem;
+  -webkit-transform: translateY(6rem);
+          transform: translateY(6rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card__side--front .details .bold {
+  font-weight: 600;
+}
+
+.card__side--front .details .feels,
+.card__side--front .details .humidity {
+  border-right: 2px solid rgba(255, 255, 255, 0.5);
+  padding-right: 2rem;
+}
+
+.card__side--back {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.card__side--back .day {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  line-height: 2rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.card__side--back .day .date-condition {
+  text-align: start;
+  -ms-flex-preferred-size: 33.3333%;
+      flex-basis: 33.3333%;
+}
+
+.card__side--back .day .image {
+  -ms-flex-preferred-size: 33.3333%;
+      flex-basis: 33.3333%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.card__side--back .day .hi-low {
+  text-align: end;
+  -ms-flex-preferred-size: 33.3333%;
+      flex-basis: 33.3333%;
+}
+
+.card__side--back .day .hi-low .low {
+  color: #ccc;
+}
+
+.card__side--back .divider {
+  width: 25rem;
+  border-radius: 100px;
+  border-top: 2px solid #ccc;
+}
+
+.card__side--back .city-state {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 500;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.card:hover .card__side--front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card:hover .card__side--back {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+/*# sourceMappingURL=Weather.css.map */

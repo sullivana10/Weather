@@ -1,0 +1,197 @@
+$color-grey-dark-1: rgba(0, 0, 0, 0.5);
+$color-grey-dark-2: rgba(0, 0, 0, 0.25);
+$color-grey-light: rgba(255, 255, 255, 0.5);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 4rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+}
+
+.input {
+  height: 3rem;
+  border-radius: 2rem;
+  background-color: $color-grey-dark-1;
+  color: #bbb;
+  border: none;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 5rem;
+
+  &::placeholder {
+    color: #bbb;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn {
+  display: none;
+}
+
+.card {
+  perspective: 150rem;
+  position: relative;
+  height: 40rem;
+  width: 30rem;
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__side {
+    height: 40rem;
+    width: 30rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 1.5rem 4rem $color-grey-dark-2;
+    transition: all 0.5s ease;
+    position: absolute;
+    backface-visibility: hidden;
+
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &--front {
+      background-color: $color-grey-dark-1;
+
+      .city-state {
+        color: #fff;
+        font-size: 2rem;
+        font-weight: 500;
+        padding-top: 2rem;
+      }
+
+      .date {
+        color: #fff;
+        font-size: 1.5rem;
+      }
+
+      .temp {
+        color: #fff;
+        font-size: 7.5rem;
+        font-weight: 900;
+        margin-top: 3.5rem;
+        text-shadow: 2px 10px $color-grey-dark-1;
+
+        span {
+          font-weight: 500;
+        }
+      }
+
+      .icon {
+        padding-top: 2rem;
+      }
+
+      .condition {
+        color: #fff;
+        font-size: 2rem;
+        font-weight: 700;
+        font-style: italic;
+        margin-bottom: 1rem;
+        text-shadow: 0px 3px $color-grey-dark-1;
+      }
+
+      .hi-low {
+        color: #fff;
+        font-size: 1.5rem;
+        text-shadow: 0px 4px $color-grey-dark-1;
+      }
+
+      .details {
+        width: 100%;
+        background-color: $color-grey-light;
+        box-shadow: 0 1.5rem 4rem $color-grey-dark-2;
+        font-size: 1.25rem;
+        color: $color-grey-dark-1;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        border-radius: 0.75rem;
+        line-height: 2rem;
+        transform: translateY(3rem);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .bold {
+          font-weight: 600;
+        }
+
+        .feels,
+        .humidity {
+          border-right: 2px solid $color-grey-light;
+          padding-right: 2rem;
+        }
+      }
+    }
+
+    &--back {
+      background-color: $color-grey-dark-1;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+
+      transform: rotateY(180deg);
+
+      .day {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-top: 2px solid #ccc;
+        width: 25rem;
+        display: flex;
+        flex-direction: row;
+        line-height: 2rem;
+        align-items: flex-start;
+
+        .date-condition {
+          width: 33.3333%;
+          text-align: start;
+        }
+
+        .image {
+          width: 33.3333%;
+          align-self: center;
+        }
+
+        .hi-low {
+          width: 33.3333%;
+          text-align: end;
+
+          .low {
+            color: #ccc;
+          }
+        }
+      }
+
+      .city-state {
+        color: #fff;
+        font-size: 2rem;
+        font-weight: 500;
+        margin-bottom: 5rem;
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0deg);
+  }
+}
