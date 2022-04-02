@@ -1,3 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 4rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-self: center;
+}
+
 .form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9,15 +26,14 @@
 
 .input {
   height: 3rem;
-  border-radius: 100px;
+  border-radius: 2rem;
   background-color: rgba(0, 0, 0, 0.5);
   color: #bbb;
   border: none;
   text-align: center;
   font-family: "Ubuntu", sans-serif;
   font-size: 2rem;
-  margin-top: 3rem;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
 .input::-webkit-input-placeholder {
@@ -48,7 +64,7 @@
   -webkit-perspective: 150rem;
           perspective: 150rem;
   position: relative;
-  height: 45rem;
+  height: 40rem;
   width: 30rem;
   font-family: "Ubuntu", sans-serif;
   display: -webkit-box;
@@ -63,9 +79,9 @@
 }
 
 .card__side {
-  height: 45rem;
+  height: 40rem;
   width: 30rem;
-  border-radius: 25px;
+  border-radius: 1.5rem;
   -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.25);
           box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.25);
   -webkit-transition: all 0.5s ease;
@@ -93,22 +109,22 @@
 
 .card__side--front .city-state {
   color: #fff;
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 500;
   padding-top: 2rem;
 }
 
 .card__side--front .date {
   color: #fff;
-  font-size: 22px;
+  font-size: 1.5rem;
 }
 
 .card__side--front .temp {
   color: #fff;
-  font-size: 115px;
+  font-size: 7.5rem;
   font-weight: 900;
   margin-top: 3.5rem;
-  text-shadow: 2px 10px rgba(0, 0, 0, 0.6);
+  text-shadow: 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .card__side--front .temp span {
@@ -121,18 +137,17 @@
 
 .card__side--front .condition {
   color: #fff;
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
   font-style: italic;
-  margin-bottom: 15px;
-  text-shadow: 0px 3px rgba(0, 0, 0, 0.4);
+  margin-bottom: 1rem;
+  text-shadow: 0px 3px rgba(0, 0, 0, 0.5);
 }
 
 .card__side--front .hi-low {
   color: #fff;
-  font-size: 24px;
-  font-weight: 500px;
-  text-shadow: 0px 4px rgba(0, 0, 0, 0.4);
+  font-size: 1.5rem;
+  text-shadow: 0px 4px rgba(0, 0, 0, 0.5);
 }
 
 .card__side--front .details {
@@ -140,14 +155,14 @@
   background-color: rgba(255, 255, 255, 0.5);
   -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.25);
           box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.25);
-  font-size: 20px;
-  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.25rem;
+  color: rgba(0, 0, 0, 0.5);
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-  border-radius: 12px;
-  line-height: 0.5rem;
-  -webkit-transform: translateY(6rem);
-          transform: translateY(6rem);
+  border-radius: 0.75rem;
+  line-height: 2rem;
+  -webkit-transform: translateY(3rem);
+          transform: translateY(3rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -184,6 +199,10 @@
 }
 
 .card__side--back .day {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 2px solid #ccc;
+  width: 25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -198,42 +217,31 @@
 }
 
 .card__side--back .day .date-condition {
+  width: 33.3333%;
   text-align: start;
-  -ms-flex-preferred-size: 33.3333%;
-      flex-basis: 33.3333%;
 }
 
 .card__side--back .day .image {
-  -ms-flex-preferred-size: 33.3333%;
-      flex-basis: 33.3333%;
+  width: 33.3333%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
 
 .card__side--back .day .hi-low {
+  width: 33.3333%;
   text-align: end;
-  -ms-flex-preferred-size: 33.3333%;
-      flex-basis: 33.3333%;
 }
 
 .card__side--back .day .hi-low .low {
   color: #ccc;
 }
 
-.card__side--back .divider {
-  width: 25rem;
-  border-radius: 100px;
-  border-top: 2px solid #ccc;
-}
-
 .card__side--back .city-state {
   color: #fff;
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 500;
-  margin-top: 2rem;
   margin-bottom: 5rem;
-  text-align: center;
 }
 
 .card:hover .card__side--front {

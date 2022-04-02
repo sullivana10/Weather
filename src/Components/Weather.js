@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../Styles/Weather.scss";
 
 function Weather() {
-  const [location, setLocation] = useState("Minneapolis");
+  const [location, setLocation] = useState("");
   const [info, setInfo] = useState({});
 
   useEffect(() => {

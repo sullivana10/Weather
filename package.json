@@ -40,6 +40,8 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/cypress": "^8.0.2",
+    "cypress": "^9.5.3",
     "node-sass": "^7.0.1"
   }
 }
