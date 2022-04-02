@@ -2,6 +2,8 @@
 
 ![myfile](https://i.imgur.com/v2ffzw7.gif)
 
+[Live Demo](https://weather-sullivan.netlify.app/)
+
 ## Description
 
 This project is a simple weather app that displays both current and forecasted weather.
