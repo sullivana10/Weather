@@ -1,3 +1,5 @@
+@import "./global.scss";
+
 $color-grey-dark-1: rgba(0, 0, 0, 0.5);
 $color-grey-dark-2: rgba(0, 0, 0, 0.25);
 $color-grey-light: rgba(255, 255, 255, 0.5);
@@ -5,6 +7,10 @@ $color-grey-light: rgba(255, 255, 255, 0.5);
 * {
   margin: 0;
   padding: 0;
+
+  @include mobile {
+    overflow: hidden;
+  }
 }
 
 .container {
@@ -17,6 +23,10 @@ $color-grey-light: rgba(255, 255, 255, 0.5);
 .form {
   display: flex;
   justify-content: center;
+
+  @include mobile {
+    flex-direction: column;
+  }
 }
 
 .input {
@@ -30,6 +40,13 @@ $color-grey-light: rgba(255, 255, 255, 0.5);
   font-size: 2rem;
   margin-bottom: 5rem;
 
+  @include mobile {
+    margin-bottom: 1rem;
+    width: 75%;
+    display: flex;
+    align-self: center;
+  }
+
   &::placeholder {
     color: #bbb;
   }
@@ -40,6 +57,18 @@ $color-grey-light: rgba(255, 255, 255, 0.5);
 
 .btn {
   display: none;
+
+  @include mobile {
+    width: 20%;
+    height: 2rem;
+    background-color: #bbb;
+    margin: 1rem 0;
+    border-radius: 30px;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .card {
@@ -51,6 +80,12 @@ $color-grey-light: rgba(255, 255, 255, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include mobile {
+    width: 100%;
+    height: 100vh;
+    align-items: flex-start;
+  }
 
   &__side {
     height: 40rem;
@@ -67,14 +102,29 @@ $color-grey-light: rgba(255, 255, 255, 0.5);
     align-items: center;
     text-align: center;
 
+    @include mobile {
+      width: 75vw;
+      height: 65vh;
+      margin-top: 1.5rem;
+    }
+
     &--front {
       background-color: $color-grey-dark-1;
+
+      @include mobile {
+        width: 75vw;
+        height: 65vh;
+      }
 
       .city-state {
         color: #fff;
         font-size: 2rem;
         font-weight: 500;
         padding-top: 2rem;
+
+        @include mobile {
+          padding: 0;
+        }
       }
 
       .date {
@@ -89,6 +139,10 @@ $color-grey-light: rgba(255, 255, 255, 0.5);
         margin-top: 3.5rem;
         text-shadow: 2px 10px $color-grey-dark-1;
 
+        @include mobile {
+          margin-top: 1rem;
+        }
+
         span {
           font-weight: 500;
         }
@@ -96,6 +150,10 @@ $color-grey-light: rgba(255, 255, 255, 0.5);
 
       .icon {
         padding-top: 2rem;
+
+        @include mobile {
+          padding-top: 0;
+        }
       }
 
       .condition {
@@ -136,6 +194,10 @@ $color-grey-light: rgba(255, 255, 255, 0.5);
         .humidity {
           border-right: 2px solid $color-grey-light;
           padding-right: 2rem;
+
+          @include mobile {
+            padding-right: 0.5rem;
+          }
         }
       }
     }
@@ -148,6 +210,15 @@ $color-grey-light: rgba(255, 255, 255, 0.5);
 
       transform: rotateY(180deg);
 
+      .container {
+        @include mobile {
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          //justify-content: space-evenly;
+        }
+      }
+
       .day {
         padding-top: 1rem;
         padding-bottom: 1rem;
@@ -157,6 +228,12 @@ $color-grey-light: rgba(255, 255, 255, 0.5);
         flex-direction: row;
         line-height: 2rem;
         align-items: flex-start;
+
+        @include mobile {
+          width: 100%;
+          display: flex;
+          padding: 2rem 0;
+        }
 
         .date-condition {
           width: 33.3333%;
@@ -178,11 +255,22 @@ $color-grey-light: rgba(255, 255, 255, 0.5);
         }
       }
 
+      .location {
+        @include mobile {
+          width: 100%;
+          margin: 2rem 0;
+        }
+      }
+
       .city-state {
         color: #fff;
         font-size: 2rem;
         font-weight: 500;
         margin-bottom: 5rem;
+
+        @include mobile {
+          margin-bottom: 1rem;
+        }
       }
     }
   }
